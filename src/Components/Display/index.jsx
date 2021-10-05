@@ -63,6 +63,10 @@ function Display({ arrayFruits, saidaFruts }) {
           isModified.map((element, indice) => (
             <Card key={indice} item={element} />
           ))}
+        {saidaFruts[0] &&
+          saidaFruts.map((element, indice) => (
+            <Card key={indice} item={element} />
+          ))}
         {!isModified[0] && <p>Sem modificações!</p>}
       </div>
     </>

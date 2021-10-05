@@ -65,7 +65,6 @@ function App() {
           ? {
               ...element,
               quantidade: element.quantidade - quantidade,
-              condition: "saida",
             }
           : element
       )
