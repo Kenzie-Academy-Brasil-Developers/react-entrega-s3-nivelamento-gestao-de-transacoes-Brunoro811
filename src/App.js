@@ -81,9 +81,7 @@ function App() {
     setName("");
     setQuantidade("");
   };
-  const loaSaida = () => {
-    setSaidaFruts(saidaFruts.filter((element) => element));
-  };
+
   useEffect(() => {
     setSaidaFruts(saidaFruts);
   }, [saidaFruts]);
