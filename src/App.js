@@ -3,6 +3,7 @@ import Form from "./Components/Form";
 import { useState } from "react";
 import Nav from "./Components/Nav";
 import Display from "./Components/Display";
+import { useEffect } from "react/cjs/react.development";
 
 function App() {
   const [isEntrada, setIsEntrada] = useState(false);
@@ -80,6 +81,12 @@ function App() {
     setName("");
     setQuantidade("");
   };
+  const loaSaida = () => {
+    setSaidaFruts(saidaFruts.filter((element) => element));
+  };
+  useEffect(() => {
+    setSaidaFruts(saidaFruts);
+  }, [saidaFruts]);
   return (
     <div className="App App-header">
       <Nav
@@ -113,7 +120,11 @@ function App() {
           isSaida
         />
       )}
-      <Display saidaFruts={saidaFruts} arrayFruits={fruits} />
+      <Display
+        setSaidaFruts={setSaidaFruts}
+        saidaFruts={saidaFruts}
+        arrayFruits={fruits}
+      />
     </div>
   );
 }

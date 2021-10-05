@@ -4,10 +4,11 @@ import Card from "../Card";
 import "./style.css";
 function Display({ arrayFruits, saidaFruts }) {
   const [fruitsFiltered, setFruitsFiltered] = useState([]);
-  const [isModified, setIsModified] = useState(
-    arrayFruits.filter((element) => element.condition)
-  );
-  const [title, setTitle] = useState("title");
+  const [isModified, setIsModified] = useState([
+    ...saidaFruts,
+    arrayFruits.filter((element) => element.condition),
+  ]);
+  const [title, setTitle] = useState("Todos");
   const loadMovi = () => {
     setIsModified(arrayFruits.filter((element) => element.condition));
   };
@@ -31,8 +32,9 @@ function Display({ arrayFruits, saidaFruts }) {
     loadMovi();
   };
   useEffect(() => {
-    handleTodosDisplay();
-  }, []);
+    setFruitsFiltered(arrayFruits.map((element) => element));
+    setIsModified(arrayFruits.filter((element) => element.condition));
+  }, [arrayFruits]);
   useEffect(() => () => {}, []);
   return (
     <>
@@ -67,7 +69,6 @@ function Display({ arrayFruits, saidaFruts }) {
           saidaFruts.map((element, indice) => (
             <Card key={indice} item={element} />
           ))}
-        {!isModified[0] && <p>Sem modificações!</p>}
       </div>
     </>
   );
