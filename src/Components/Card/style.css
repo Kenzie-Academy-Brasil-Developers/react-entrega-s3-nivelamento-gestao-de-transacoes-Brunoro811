@@ -1,0 +1,11 @@
+.Card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: space-around;
+  border-bottom: 1px solid dimgray;
+}
+.Card-Item {
+  padding: 5px;
+}

@@ -1,0 +1,16 @@
+.Button {
+  width: 100%;
+  max-width: 250px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+}
+.Primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+.Secundary {
+  background-color: var(--secundary);
+  color: #ffffff;
+}
