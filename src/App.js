@@ -3,7 +3,7 @@ import Form from "./Components/Form";
 import { useState } from "react";
 import Nav from "./Components/Nav";
 import Display from "./Components/Display";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 function App() {
   const [isEntrada, setIsEntrada] = useState(false);
