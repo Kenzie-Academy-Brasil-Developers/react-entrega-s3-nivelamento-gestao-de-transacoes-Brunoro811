@@ -91,6 +91,8 @@ function App() {
         handleOcultarForms={handleOcultarForms}
         handleIsEntrada={handleIsEntrada}
         handleIsSaida={handleIsSaida}
+        isEntrada={isEntrada}
+        isSaida={isSaida}
       />
 
       {isEntrada && (
